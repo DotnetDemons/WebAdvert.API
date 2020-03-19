@@ -28,7 +28,7 @@ namespace WebAdvert.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddAdvert(AdvertModel model)
         {
-            return StatusCode(200, new CreateAdvertResponse { Id = await _storageService.Add(model });
+            return StatusCode(200, new CreateAdvertResponse { Id = await _storageService.Add(model )});
         }
 
         public async Task<IActionResult> Confirm(ConfirmAdvertModel model)
