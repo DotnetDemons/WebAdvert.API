@@ -21,5 +21,7 @@ namespace WebAdvert.API.Services
         public DateTime CreationDateTime { get; set; }
         [DynamoDBProperty]
         public AdvertStatus Status { get; set; }
+        [DynamoDBProperty]
+        public string FilePath { get; set; }
     }
 }

@@ -13,14 +13,10 @@ namespace WebAdvert.API.Controllers
     [Route("api/v1/[controller]")]
     public class AdvertController : ControllerBase
     {
-        
-
-        private readonly ILogger<WeatherForecastController> _logger;
         private readonly IAdvertStorageService _storageService; 
 
-        public AdvertController(ILogger<WeatherForecastController> logger, IAdvertStorageService storageService )
+        public AdvertController( IAdvertStorageService storageService )
         {
-            _logger = logger;
             _storageService = storageService;
         }
 
@@ -28,7 +24,14 @@ namespace WebAdvert.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddAdvert(AdvertModel model)
         {
-            return StatusCode(200, new CreateAdvertResponse { Id = await _storageService.Add(model )});
+            try
+            {
+                return StatusCode(200, new CreateAdvertResponse { Id = await _storageService.Add(model) });
+            }
+            catch (Exception Ex)
+            {
+                return null;
+            }
         }
 
         public async Task<IActionResult> Confirm(ConfirmAdvertModel model)

@@ -20,7 +20,7 @@ namespace WebAdvert.API.Services
         public async Task<string> Add(AdvertModel model)
         {
             var dbModel = _mapper.Map<AdvertDBModel>(model);
-            dbModel.Id = new Guid().ToString();
+            dbModel.Id = Guid.NewGuid().ToString();
             dbModel.CreationDateTime = DateTime.UtcNow;
             dbModel.Status = AdvertStatus.Pending;
 
@@ -47,6 +47,7 @@ namespace WebAdvert.API.Services
                     }
                     else if(model.Status == AdvertStatus.Active)
                     {
+                        record.FilePath = model.FilePath;
                         record.Status = AdvertStatus.Active;
                         await context.SaveAsync<AdvertDBModel>(record);
                     }
