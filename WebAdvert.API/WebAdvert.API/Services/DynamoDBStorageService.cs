@@ -58,5 +58,9 @@ namespace WebAdvert.API.Services
                 }
             }
         }
+        public List<AdvertModel> Read(string Id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

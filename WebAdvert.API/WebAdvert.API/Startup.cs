@@ -29,7 +29,7 @@ namespace WebAdvert.API
         {
             services.AddLogging();
             services.AddAutoMapper(typeof(Startup));
-            services.AddTransient<IAdvertStorageService, DynamoDBStorageService>();
+            services.AddTransient<IAdvertStorageService, SqliteStorageService>();
             services.AddControllers();
             services.AddHealthChecks();
         }

@@ -10,5 +10,8 @@ namespace WebAdvert.API.Services
     {
         Task<string> Add(AdvertModel model);
         Task Confirm(ConfirmAdvertModel model);
+        List<AdvertModel> Read(string Id);
     }
+
+   
 }
