@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvert.API", "WebAdvert.API\WebAdvert.API.csproj", "{1DCDB8AA-015B-48DE-9113-B6300C31EC42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAdvert.API", "WebAdvert.API\WebAdvert.API.csproj", "{1DCDB8AA-015B-48DE-9113-B6300C31EC42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvertAPI.Models", "AdvertAPI.Models\AdvertAPI.Models.csproj", "{ACE4FF48-ED66-48E4-AF30-CE525935F9CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvertAPI.Models", "AdvertAPI.Models\AdvertAPI.Models.csproj", "{ACE4FF48-ED66-48E4-AF30-CE525935F9CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advert.Tests", "Advert.Tests\Advert.Tests.csproj", "{B596BB37-0668-4825-B939-5D41D84013B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ACE4FF48-ED66-48E4-AF30-CE525935F9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE4FF48-ED66-48E4-AF30-CE525935F9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE4FF48-ED66-48E4-AF30-CE525935F9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B596BB37-0668-4825-B939-5D41D84013B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B596BB37-0668-4825-B939-5D41D84013B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B596BB37-0668-4825-B939-5D41D84013B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B596BB37-0668-4825-B939-5D41D84013B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
