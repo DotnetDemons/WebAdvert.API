@@ -38,21 +38,6 @@ namespace WebAdvert.API.Controllers
         {
            await _storageService.Confirm(model);
             return StatusCode(200);
-        }
-
-        [Route("[Action]")]
-        [HttpGet]
-        public async Task<IActionResult> GetAdvert(string Id)
-        {
-            try
-            {
-                return StatusCode(200,  _storageService.Read(Id));
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
-        }
-        
+        } 
     }
 }
