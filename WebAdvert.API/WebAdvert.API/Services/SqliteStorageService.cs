@@ -37,6 +37,11 @@ namespace WebAdvert.API.Services
             throw new NotImplementedException();
         }
 
+        public Task<AdvertModel> GetById(string Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<AdvertModel> Read(string Id)
         {
             using (var db = new SQLiteDBContext())

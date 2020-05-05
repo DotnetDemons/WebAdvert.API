@@ -40,12 +40,12 @@ namespace WebAdvert.API.Services
             {
                 using (var context = new DynamoDBContext(client))
                 {
-                   var record = await context.LoadAsync<AdvertDBModel>(model.Id);
-                    if(record == null)
+                    var record = await context.LoadAsync<AdvertDBModel>(model.Id);
+                    if (record == null)
                     {
                         throw new KeyNotFoundException();
                     }
-                    else if(model.Status == AdvertStatus.Active)
+                    else if (model.Status == AdvertStatus.Active)
                     {
                         record.FilePath = model.FilePath;
                         record.Status = AdvertStatus.Active;
@@ -58,6 +58,19 @@ namespace WebAdvert.API.Services
                 }
             }
         }
+
+        public async Task<AdvertModel> GetById(string Id)
+        {
+            using (var client = new AmazonDynamoDBClient())
+            {
+                using (var context = new DynamoDBContext(client))
+                {
+                    var record = await context.LoadAsync<AdvertDBModel>(Id);
+                    return _mapper.Map<AdvertModel>(record);
+                }
+            }
+        }
+
         public List<AdvertModel> Read(string Id)
         {
             throw new NotImplementedException();
